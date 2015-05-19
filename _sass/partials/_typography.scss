@@ -1,0 +1,86 @@
+i[class^='fa']:after,
+span[class^='icon']:after {
+	content: '';
+	display: inline-block;
+}
+
+i.icon-aws {
+	vertical-align: middle;
+}
+
+.section-title {
+	margin-top: 0.5em;
+	margin-bottom: 0.75em;
+}
+
+h3 {
+	font-weight: 400;
+}
+
+h4.section-title {
+	font-weight: 600;
+}
+
+.section-title-right {
+	padding-top: 0.5em;
+
+	@media (max-width: $screen-sm) {
+		padding-top: 0;
+		margin-bottom: 0.75em;
+		text-align: left;
+
+		.btn {
+			width: 100%;
+
+			&:not(:last-of-type) {
+				margin-bottom: 0.75em;
+			}
+		}
+	}
+}
+
+.section-subtitle {
+	margin-top: -1em;
+	margin-bottom: 2em;
+}
+
+.section-title-secondary {
+	margin-top: 2.25em;
+	margin-bottom: 1em;
+	font-weight: 600;
+}
+
+.text-danger,
+.text-danger a, {
+	color: $color-red;
+}
+
+.text-danger a {
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color-red-darkest;
+	}
+}
+
+strong {
+	font-weight: 600;
+}
+
+small {
+	color: inherit !important;
+}
+
+label {
+	font-weight: 600;
+}
+
+span[class~='icon-circle-cross'],
+span[class~='icon-cross'] {
+	color: $color-red;
+}
+
+span[class~='icon-check'],
+span[class~='icon-circle-check'] {
+	color: $color-green;
+}

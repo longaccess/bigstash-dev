@@ -1,0 +1,353 @@
+// ------------------------------
+
+// General Navbar Styles
+
+// ------------------------------
+
+nav {
+	&:not(.navbar-progress-bar) {
+		font-size: 65%;
+	}
+
+	a {
+		&:link,
+		&:visited,
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+}
+
+// ------------------------------
+
+// Hamburger
+
+// ------------------------------
+
+.hamburger {
+	padding: 0;
+	margin-top: 17px;
+
+	&:hover {
+		transition: $transition-5;
+		background: none !important;
+	}
+
+	&:hover .hamburger-layers:before {
+		top: -7px;
+	}
+
+	&:hover .hamburger-layers:after {
+		top: 7px;
+	}
+
+	.hamburger-layers {
+		background: $color-main-text;
+		position: relative;
+		width: 20px;
+		height: 2px;
+		margin: 5px 0;
+		@extend %transition-2;
+
+		&:after, &:before {
+			background: $color-main-text;
+			content: '';
+			display: block;
+			width: 20px;
+			height: 2px;
+			position: absolute;
+			@extend %transition-2;
+		}
+
+		&:before {
+			top: -5px;
+		}
+
+		&:after {
+			top: 5px;
+		}
+	}
+}
+
+.hamburger-open {
+    .hamburger-layers {
+		background: none;
+    }
+
+    .hamburger-layers:after,
+	.hamburger-layers:before {
+		top: 0 !important;
+		background: $color-main-text;
+	}
+
+    .hamburger-layers:after {
+        transform: rotate(45deg);
+    }
+
+    .hamburger-layers:before {
+        transform: rotate(-45deg);
+    }
+}
+
+// Hamburger Background Image
+body.background-image {
+	.hamburger {
+		.hamburger-layers {
+			background: $color-white;
+
+			&:after, &:before {
+				background: $color-white;
+			}
+		}
+	}
+
+	.navbar-collapse {
+		a {
+			&:hover {
+				color: $color-main-text;
+			}
+		}
+	}
+}
+
+body.background-image.hamburger-open {
+    .hamburger-layers {
+		background: none;
+    }	
+}
+
+// ------------------------------
+
+// Impersonate
+
+// ------------------------------
+
+.impersonate {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    .impersonate-user {
+		text-decoration: underline;
+    }
+
+    a {
+		color: $color-red;
+    }
+}
+
+// ------------------------------
+
+// Main Navbar
+
+// ------------------------------
+
+nav.navbar-main {
+	border: 0;
+	// FOR TEST PURPOSES
+	// border-bottom: 1px solid $white;
+	font-weight: 700;
+	padding: 1.25em 0 0.75em;
+	color: $color-main-text;
+
+	.navbar-form {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		input {
+			font-weight: normal;
+		}
+	}
+
+	:not(.dropdown-menu) > li > a {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.navbar-brand img {
+		width: 150px;
+		margin-top: -0.3em;
+
+		@media (min-width: $screen-sm) {
+			margin-left: -0.8em;
+		}
+	}
+
+	.navbar-toggle {
+		border-width: 0;
+		border-radius: 0;
+
+		span {
+			background-color: $color-main-text;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $color-white;
+		}
+	}
+
+	.list-inline {
+		margin-top: 1.5em;
+		margin-right: -1.5em;
+
+		>li {
+			padding-left: 17.5px;
+			padding-right: 0;
+		}
+	}
+
+	.navbar-nav {
+		a:hover,
+		a:focus,
+		a:active {
+			background-color: $color-white;
+		}
+
+		i[class^='fa'],
+		i[class^='icon'],
+		span[class^='icon'] {
+			display: none;
+		}
+	}
+
+	li.dropdown-li {
+		margin-right: 1em;
+		position: relative;
+		cursor: pointer;
+
+		>:not(.dropdown-menu) i {
+			position: absolute;
+			top: 0.1em;
+			right: -1.1em;
+		}
+
+		a {
+			color: $color-main-text;
+		}
+	}
+
+	.dropdown-menu {
+		padding: 10px 0;
+		top: 2em;
+		margin-left: 1em;
+		cursor: default;
+	}
+
+	.dropdown-menu>li>span {
+		font-weight: 600;
+	}
+
+	.search-form {
+		.search-submit {
+			display: none;
+		}
+
+		.search-field {
+			background-color: transparent;
+			background-image: url('../img/search.svg');
+			background-position: 2px center;
+			background-repeat: no-repeat;
+			background-size: 12px 12px;
+			border: 0;
+			cursor: pointer;
+			margin: 0;
+			padding: 0 0 0 14px;
+			position: relative;
+			width: 0;
+			letter-spacing: 1px;
+			@extend %transition-4;
+
+			&:focus {
+				cursor: text;
+				outline: 0;
+				width: 100px;
+				padding: 0 0 0 20px;
+			}
+
+			/* &:focus ~ .search-submit {
+				// display: inline;
+				-webkit-animation-name: fadeIn;
+				-webkit-animation-duration: transition-2;
+				animation-name: fadeIn;
+				animation-duration: transition-2;
+			} */
+		}
+
+		input[type='search'] {
+			-webkit-appearance: textfield;
+			font-weight: normal;
+		}
+	}
+
+	@media (min-width: $screen-sm) {
+		// Underline
+		:not(.dropdown-menu) > li > a:after {
+			content: '';
+			display: block;
+			margin: auto;
+			height: 1px;
+			width: 0px;
+			background: transparent;
+			//@extend %transition-2;
+		}
+
+		// Underline
+		:not(.dropdown-menu) > li > a:hover:after {
+		    width: 90%;
+		    background: $color-main-text;
+		}
+	}
+
+	// Underline
+	:not(.dropdown-menu) > li > a:after {
+		@extend %transition-2;
+	}
+}
+
+// ------------------------------
+
+// Progress Bar
+
+// ------------------------------
+
+nav.navbar-progress-bar {
+	.progress {
+		height: 0.1em;
+
+		.progress-bar {
+			background-color: $color-red;
+			box-shadow: none;
+		}
+	}
+
+	.space-stats {
+		opacity: 0;
+		margin-top: -1em;
+		margin-bottom: 1em;
+		font-size: 65%;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-align: right;
+		@extend %transition-3;
+	}
+
+	&:hover .space-stats {
+		opacity: 1;
+	}
+
+	@media (max-width: $screen-md) {
+		margin-bottom: 0.75em;
+
+		.space-stats {
+			opacity: 1;
+			text-align: center;
+		}
+	}
+}

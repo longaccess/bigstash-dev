@@ -1,0 +1,29 @@
+a {
+	@extend %transition-1;
+
+	&:link,
+	&:visited {
+		color: $color-main-text;
+		text-decoration: underline;
+	}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: $color-blue-darkest;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.btn {
+		text-decoration: none;
+		
+		&:focus,
+		&:active {
+			color: inherit;
+		}
+	}
+}

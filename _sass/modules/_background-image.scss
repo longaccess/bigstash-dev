@@ -1,0 +1,589 @@
+// ------------------------------
+
+// Background Image Squirrel
+
+// ------------------------------
+
+body.background-image-squirrel {
+	background:
+		linear-gradient(to bottom, rgba(0,0,0,0.65)
+			0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 100%)
+			no-repeat center center,
+			url(../img/squirrel.jpg) no-repeat center center;
+	filter: 
+		progid:DXImageTransform.Microsoft.gradient(
+			startColorstr='#a6000000',
+			endColorstr='#00000000',
+			GradientType=0
+		);
+
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+		background: 
+			linear-gradient(to bottom, rgba(0,0,0,0.65)
+				0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 100%)
+				no-repeat center center,
+				url(../img/squirrel-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 667px) 
+	and (orientation : landscape) {
+		background: 
+			linear-gradient(to bottom, rgba(0,0,0,0.65)
+				0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 100%)
+				no-repeat center center,
+				url(../img/squirrel-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 540px) 
+	and (max-device-width : 960px) 
+	and (orientation : landscape) {
+		background: 
+			linear-gradient(to bottom, rgba(0,0,0,0.65)
+				0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 100%)
+				no-repeat center center,
+				url(../img/squirrel-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 568px) 
+	and (orientation : landscape) {
+		background: 
+			linear-gradient(to bottom, rgba(0,0,0,0.65)
+				0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 100%)
+				no-repeat center center,
+				url(../img/squirrel-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) 
+	and (orientation : landscape) {
+		background: 
+			linear-gradient(to bottom, rgba(0,0,0,0.65)
+				0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 100%)
+				no-repeat center center,
+				url(../img/squirrel-sm.jpg) no-repeat center center;
+	}
+
+	.section-splash-part-1 {
+		color: $color-white !important;
+		padding-bottom: 8%;
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+// ------------------------------
+
+// Background Image Wave
+
+// ------------------------------
+
+body.background-image-wave {
+	background: url(../img/wave.jpg) no-repeat center center;
+
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+		background: url(../img/wave-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 667px) 
+	and (orientation : landscape) {
+		background: url(../img/wave-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 540px) 
+	and (max-device-width : 960px) 
+	and (orientation : landscape) {
+		background: url(../img/wave-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 568px) 
+	and (orientation : landscape) {
+		background: url(../img/wave-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) 
+	and (orientation : landscape) {
+		background: url(../img/wave-sm.jpg) no-repeat center center;
+	}
+
+	.section-splash-part-1 {
+		color: $color-white !important;
+		padding-bottom: 8%;
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+// ------------------------------
+
+// Background Image Canoe
+
+// ------------------------------
+
+body.background-image-canoe {
+	background: url(../img/canoe.jpg) no-repeat center center;
+
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+		background: url(../img/canoe-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 667px) 
+	and (orientation : landscape) {
+		background: url(../img/canoe-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 540px) 
+	and (max-device-width : 960px) 
+	and (orientation : landscape) {
+		background: url(../img/canoe-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 568px) 
+	and (orientation : landscape) {
+		background: url(../img/canoe-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) 
+	and (orientation : landscape) {
+		background: url(../img/canoe-sm.jpg) no-repeat center center;
+	}
+
+	.section-splash-part-1 {
+		color: $color-white !important;
+		padding-bottom: 8%;
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+// ------------------------------
+
+// Background Image Backpack
+
+// ------------------------------
+
+body.background-image-backpack {
+	background: url(../img/backpack.jpg) no-repeat center center;
+
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+		background: url(../img/backpack-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 667px) 
+	and (orientation : landscape) {
+		background: url(../img/backpack-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 540px) 
+	and (max-device-width : 960px) 
+	and (orientation : landscape) {
+		background: url(../img/backpack-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 568px) 
+	and (orientation : landscape) {
+		background: url(../img/backpack-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) 
+	and (orientation : landscape) {
+		background: url(../img/backpack-sm.jpg) no-repeat center center;
+	}
+
+	.section-splash-part-1 {
+		color: $color-white !important;
+		padding-bottom: 8%;
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+// ------------------------------
+
+// Background Image Desert
+
+// ------------------------------
+
+body.background-image-desert {
+	background: url(../img/desert.jpg) no-repeat center center;
+
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+		background: url(../img/desert-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 667px) 
+	and (orientation : landscape) {
+		background: url(../img/desert-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 540px) 
+	and (max-device-width : 960px) 
+	and (orientation : landscape) {
+		background: url(../img/desert-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 568px) 
+	and (orientation : landscape) {
+		background: url(../img/desert-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) 
+	and (orientation : landscape) {
+		background: url(../img/desert-sm.jpg) no-repeat center center;
+	}
+
+	.section-splash-part-1 {
+		color: $color-white !important;
+		padding-bottom: 8%;
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+// ------------------------------
+
+// Background Image Penguins
+
+// ------------------------------
+
+body.background-image-penguins {
+	background: url(../img/penguins.jpg) no-repeat center center;
+
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+		background: url(../img/penguins-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 667px) 
+	and (orientation : landscape) {
+		background: url(../img/penguins-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 540px) 
+	and (max-device-width : 960px) 
+	and (orientation : landscape) {
+		background: url(../img/penguins-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 568px) 
+	and (orientation : landscape) {
+		background: url(../img/penguins-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) 
+	and (orientation : landscape) {
+		background: url(../img/penguins-sm.jpg) no-repeat center center;
+	}
+
+	.section-splash-part-1 {
+		color: $color-white !important;
+		padding-bottom: 8%;
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+// ------------------------------
+
+// Background Image Train
+
+// ------------------------------
+
+body.background-image-train {
+	background: url(../img/train.jpg) no-repeat center center;
+
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+		background: url(../img/train-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 667px) 
+	and (orientation : landscape) {
+		background: url(../img/train-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 540px) 
+	and (max-device-width : 960px) 
+	and (orientation : landscape) {
+		background: url(../img/train-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 568px) 
+	and (orientation : landscape) {
+		background: url(../img/train-sm.jpg) no-repeat center center;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) 
+	and (orientation : landscape) {
+		background: url(../img/train-sm.jpg) no-repeat center center;
+	}
+
+	.section-splash-part-1 {
+		color: $color-white !important;
+		padding-bottom: 8%;
+
+		a {
+			color: $color-white;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+// ------------------------------
+
+// Background Image General Styles
+// (Must stay in bottom)
+
+// ------------------------------
+
+body.background-image {
+	height: 100%;
+	background-size: 100%;
+	background-size: cover;
+	background-color: $color-background;
+
+	.navbar-collapse {
+		ul.list-inline {
+			a {
+				color: $color-white;
+
+				&:hover {
+					color: $color-white;
+				}
+			}
+		}
+
+		ul.navbar-nav {
+			a {
+				color: $color-white;
+
+				&:hover {
+					color: $color-main-text;
+				}
+			}
+		}
+
+		// Underline
+		:not(.dropdown-menu) > li > a:hover:after {
+		    background: $color-white !important;
+		}
+	}
+
+	.section-splash-part-1 {
+		text-align: left !important;
+
+		@media (min-width: $screen-sm) {
+			margin-top: 2%;
+			margin-bottom: 3.5%;
+			text-align: center;
+		}
+
+		h2.section-title {
+			margin-top: -2rem;
+			margin-bottom: 6rem;
+		}
+	}
+
+	#wrapper-intro-initial {
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 auto 0;
+		padding: 0 0 4% 0;
+
+		.container {
+			max-width: $screen-lg;
+		}
+	}
+}
+
+// ------------------------------
+
+// Arrow down
+
+// ------------------------------
+
+#arrow-down {
+	width: 40px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30rem;
+
+	@media (max-height: $screen-sm + 100px) {
+		margin-top: 30%;
+	}
+
+	@media (max-height: $screen-sm + 50px) {
+		margin-top: 25%;
+	}
+
+	@media (max-height: $screen-sm) {
+		margin-top: 20%;
+	}
+
+	@media (max-height: $screen-sm - 50px) {
+		margin-top: 15%;
+	}
+
+	@media (max-height: $screen-sm - 100px) {
+		margin-top: 10%;
+	}
+
+	@media (max-height: $screen-sm - 150px) {
+		margin-top: 7.5%;
+	}
+
+	@media (max-height: $screen-sm - 200px) {
+		margin-top: 5%;
+	}
+
+	@media (max-height: $screen-sm - 250px) {
+		margin-top: 2.5%;
+	}
+
+	@media (max-height: $screen-sm - 300px) {
+		display: none;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 568px) {
+		display: none;
+	}
+
+	@media only screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) {
+		display: none;
+	}
+
+	.button-down {
+		width: 40px;
+		height: 40px;
+		background-image: url('../img/down.png');
+		background-repeat: no-repeat;
+		display: block;
+		@extend %transition-4;
+
+		&:hover {
+			transform:translateY(8px);
+			-moz-transform:translateY(8px);
+			-ms-transform:translateY(8px);
+			-webkit-transform:translateY(8px);
+			-o-transform:translateY(8px);
+		}
+	}
+}

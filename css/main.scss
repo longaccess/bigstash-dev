@@ -1,52 +1,753 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
+@import "style";
 
+//@import 'bourbon'; // http://bourbon.io/
 
+// ------------------------------
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// Main Styles
 
-$spacing-unit:     30px;
+// ------------------------------
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+html,
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	width: 100%;
+	height: 100%;
+	word-wrap: break-word;
+}
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+body {
+	background-color: $color-background;
+	font-family: $font-sans;
+	color: $color-main-text;
+	font-size: 155%;
+}
 
-// Width of the content area
-$content-width:    800px;
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
 
-$on-palm:          600px;
-$on-laptop:        800px;
+#content {
+	padding-bottom: 17.5em;
 
+	@media (max-width: $screen-sm) {
+		padding-bottom: 20em;
+	}
+}
 
+.wrapper-intro {
+	@media (min-width: $screen-sm) and (min-height: $screen-xs) {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+}
 
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
+.container {
+	max-width: $screen-sm;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: $color-grey-darkest;
+}
+
+::-moz-selection {background-color: $color-anakiwa;}
+::selection      {background-color: $color-anakiwa;}
+
+p {
+	word-wrap: break-word;
+}
+
+// ------------------------------
+
+// Forms
+
+// ------------------------------
+
+form {
+	input,
+	textarea {
+		box-shadow: none !important;
+		border-radius: 3px !important;
+		-webkit-appearance: none;
+
+		&[type='radio'] {
+			-webkit-appearance: radio;
+		}
+
+		&:focus,
+		&:active {
+			border-color: $color-blue !important;
+		}
+	}
+
+	input.has-success {
+		border-color: $color-green !important;
+	}
+
+	input.has-error {
+		border-color: $color-red !important;
+	}
+
+	[placeholder]:not(.search-field):focus::-webkit-input-placeholder {
+		@extend %transition-3;
+	    -webkit-transform: translate(150px, 0);
+	       -moz-transform: translate(150px, 0);
+	        -ms-transform: translate(150px, 0);
+	         -o-transform: translate(150px, 0);
+	            transform: translate(150px, 0);
+	    opacity: 0;
+	}
+
+	[value] {
+		color: $color-main-text;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+}
+
+// Disable Auto Zoom in Input - Safari iOS
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .form-control {
+    font-size: 16px;
+  }
+}
+
+// ------------------------------
+
+// Dropdowns
+
+// ------------------------------
+
+.dropdown-menu {
+	box-shadow: none;
+	top: 3.25em;
+
+	>li>a {
+		color: $color-main-text !important;
+		text-decoration: none;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $color-hover;
+			text-decoration: none !important;
+		}
+	}
+
+	i[class^='fa'],
+	i[class^='icon'],
+	span[class^='icon'] {
+		margin-right: 0.5em;
+	}
+
+	&>li>span {
+		padding: 3px 20px;
+		cursor: default;
+		font-weight: 600;
+	}
+
+	.dropdown-arrow-border,
+	.dropdown-arrow {
+		left: 19px;
+	}
+
+	.dropdown-arrow-border {
+		border-color: transparent transparent $color-border-dark transparent;
+		border-style: solid;
+		border-width: 9px;
+		height: 0;
+		width: 0;
+		position: absolute;
+		top: -19px;
+	}
+
+	.dropdown-arrow {
+		border-color: transparent transparent $color-white transparent;
+		border-style: solid;
+		border-width: 9px;
+		height: 0;
+		width: 0;
+		position: absolute;
+		top: -17px;
+	}
+}
+
+// ------------------------------
+
+// Tables
+
+// ------------------------------
+
+.table-responsive {
+	@media (max-width: $screen-sm) {
+		border: 0;
+	}
+
+	font-size: 90%;
+
+	th {
+		font-weight: 600;
+	}
+
+	.table {
+		tbody {
+			>tr>th,
+			>tr>td {
+				padding-top: 1em;
+				padding-bottom: 1em;
+
+				@media (min-width: $screen-sm) {
+					max-width: 20em;
+					word-wrap: break-word;
+				}
+			}
+		}
+	}
+
+	.table-hover {
+		tbody>tr:hover>td {
+			background-color: $color-hover;
+			@extend %transition-3;
+		}
+	}
+
+	.table-condensed {
+		tbody {
+			>tr>th,
+			>tr>td {
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+			}
+		}
+	}
+
+	.table-diluted {
+		tbody {
+			>tr>th,
+			>tr>td {
+				padding-top: 1.5em;
+				padding-bottom: 1.5em;
+			}
+		}		
+	}
+
+	@media (max-width: $screen-sm) {
+		td.has-error {
+			color: $color-red;
+		}
+
+		td.has-activity {
+			font-weight: 600;
+		}
+	}
+
+	@media (min-width: $screen-sm) {
+		.ellipsis {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-wrap: nowrap;
+		}
+	}
+
+	tr.tr-initial {
+		td {
+			padding-bottom: 0.25em !important;
+		}
+
+		&:hover + tr.tr-secondary {
+			background-color: $color-hover;
+			@extend %transition-3;
+		}
+	}
+
+	tr.tr-secondary {
+		td {
+			padding-top: 0 !important;
+			border-top: none;
+		}
+	}
+}
+
+// ------------------------------
+
+// Labels
+
+// ------------------------------
+
+.label {
+	padding: 5px 8px;
+
+	a {
+		color: $color-white;
+	}
+}
+
+.label-green {
+	background-color: $color-green;
+}
+
+.label-red {
+	background-color: $color-red;
+}
+
+.label-blue {
+	background-color: $color-blue;
+}
+
+.label-blue2 {
+	background-color: $color-blue2;
+}
+
+.label-orange {
+	background-color: $color-orange;
+}
+
+// ------------------------------
+
+// Modals
+
+// ------------------------------
+.modal-dialog {
+	max-width: $screen-sm - 200px;
+
+	.modal-content {
+		border-radius: 3px;
+		box-shadow: none;
+
+		.modal-header {
+			span[class~='icon-circle-cross'],
+			span[class~='icon-cross'] {
+				color: inherit;
+				font-size: 90%;
+			}
+
+			h4 {
+				font-weight: 600;
+			}
+
+			.btn {
+				font-size: 75%;
+			}
+		}
+
+		.radio {
+			p {
+				padding-left: 20px;
+			}
+		}
+
+		.form-inline {
+			@media (max-width: $screen-sm) {
+				.inner-container {
+					label {
+						margin-top: 0.5rem;
+					}
+				}
+			}
+
+			@media (min-width: $screen-sm) {
+				.modal-body {
+					margin-bottom: 2rem;
+				}
+
+				.inner-container {
+				    position: relative;
+				    
+					label {
+					    top: 2.75rem;
+					    left: 0;
+					    position: absolute;
+
+					    small {
+					    	margin-bottom: 15rem;
+					    }
+					}
+				}
+			}
+		}
+	}
+}
+
+// ------------------------------
+
+// Alerts
+
+// ------------------------------
+
+.alert {
+	border-radius: 3px;
+	padding: 5px 10px;
+	a {
+		color: inherit;
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
+}
+
+.alert-dismissible {
+	padding-right: 30px;
+
+	.icon-cross {
+		color: inherit;
+		font-size: 70%;
+	}
+}
+
+.alert-green {
+	background-color: $color-green-very-light;
+	border-color: darken($color-green-very-light, 8%);
+	color: darken($color-green, 20%);
+
+	.icon-cross {
+		&:hover {
+			color: darken($color-green, 20%);
+		}
+	}
+}
+
+.alert-blue {
+	background-color: $color-blue-very-light;
+	border-color: darken($color-blue-very-light, 8%);
+	color: darken($color-blue, 20%);
+
+	.icon-cross {
+		&:hover {
+			color: darken($color-blue, 20%);
+		}
+	}
+}
+
+.alert-orange {
+	background-color: $color-orange-very-light;
+	border-color: darken($color-orange-very-light, 8%);
+	color: darken($color-orange, 20%);
+
+	.icon-cross {
+		&:hover {
+			color: darken($color-orange, 20%);
+		}
+	}
+}
+
+.alert-red {
+	background-color: $color-red-very-light;
+	border-color: darken($color-red-very-light, 8%);
+	color: darken($color-red, 20%);
+
+	.icon-cross {
+		&:hover {
+			color: darken($color-red, 20%);
+		}
+	}
+}
+
+// ------------------------------
+
+// Panels
+
+// ------------------------------
+
+.panel {
+	border-radius: 3px;
+	box-shadow: none;
+}
+
+// ------------------------------
+
+// Pagination
+
+// ------------------------------
+
+.pager {
+	font-size: 150%;
+
+	.previous>.btn {
+		float: left;
+	}
+
+	.next>.btn {
+		float: right;
+	}
+}
+
+// ------------------------------
+
+// I NEED TO ORGANIZE THESE:
+
+// ------------------------------
+
+.avatar {
+	width: 4em;
+	display: block;
+	margin: 0.5em 0;
+}
+
+.dot {
+	display: inline;
+	position: absolute;
+	font-size: 225%;
+	margin-top: -0.435em;
+	margin-left: -0.65em;
+
+	@media (max-width: $screen-sm) {
+		display: none;
+	}
+}
+
+.dot-default {
+	color: $color-main-text;
+}
+
+.dot-blue {
+	color: $color-blue;
+}
+
+.dot-red {
+	color: $color-red;
+}
+
+.dot-green {
+	color: $color-green;
+}
+
+pre {
+	background-color: $color-grey-light;
+}
+
+.list-group-item:first-child {
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.list-group-item:last-child {
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.tooltip-inner {
+	max-width: 100%;
+	border-radius: 3px;
+	text-align: left;
+}
+
+.tooltip {
+	@media (max-width: $screen-sm) {
+		display: none !important;
+	}
+}
+
+.hr-with-text {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 1.35em;
+    margin-bottom: 1.5em;
+
+    span {
+        position: relative;
+        display: inline-block;
     }
+	
+    span:before,
+    span:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+        height: 1px;
+        background: $color-grey-darkest;;
+    }
+
+    span:before {
+        right: 100%;
+        margin-right: 15px;
+    }
+
+    span:after {
+        left: 100%;
+        margin-left: 15px;
+    }
+}
+
+span.pull-right {
+	line-height: 1;
+	margin-bottom: 0.75em;
+}
+
+.form-control-feedback {
+	top: 30px !important;
+}
+
+.clearfix {
+	margin-bottom: 0.5em;
+}
+
+dl.dl-horizontal {
+	margin-bottom: 0;
+
+	dt {
+		text-align: left;
+	}
+}
+
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; }
+	5% { opacity: 1; }
+    10% { opacity: 1; }
+	15% { opacity: 0; }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; }
+	5% { opacity: 1; }
+    10% { opacity: 1; }
+	15% { opacity: 0; }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; }
+	5% { opacity: 1; }
+    10% { opacity: 1; }
+	15% { opacity: 0; }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
 }
 
 
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+
+
+
+
+
+#punchcard {
+	circle {
+	    @extend %transition-1;
+	    fill: $color-red-darkest !important;
+
+		&:hover {
+			//fill: $blue !important;
+		}
+	}
+
+	text.value {
+		//fill: $blue;
+		//font-weight: 600;
+		font-size: 90%;
+	}
+}
+
+.progress {
+	border-radius: 3px;
+	height: 3rem;
+
+	.progress-bar {
+		padding-top: 0.5rem;
+		font-size: 95% !important;
+		box-shadow: none;
+	}
+}
+	
+	.tooltip-inner {
+		text-align: center !important;
+	}
+
+.progress-bar-blue {
+	background-color: $color-blue;
+}
+
+.progress-bar-green {
+	background-color: $color-green;
+}
+
+.progress-bar-grey {
+	background-color: darken($color-grey-darkest, 50%);
+}
+
+.progress-bar-orange {
+	background-color: $color-orange-darkest;
+}
+
+.progress-bar-red {
+	background-color: $color-red-darkest;
+}
+
+.progress-bar-other {
+	background: $color-grey;
+	color: $color-main-text;
+}
+
+
+
+
+
+
+
+.row-loaded {
+	background-color: $color-blue-very-light !important;
+}
+
+.rowdefault,
+.row-loaded {
+	.changing {
+		opacity: 1;
+		position: absolute;
+
+		&:not(.btn-xs) {
+			@extend %transition-3;
+		}
+	}
+
+	.replacing { 
+		opacity: 0;
+
+		&:not(.btn-xs) {
+			@extend %transition-3;
+		}
+	}
+
+	&:hover {
+		.changing {
+			opacity: 0;
+		}
+
+		.replacing {
+			opacity: 1;
+		}
+
+		.btn-xs {
+			@extend %transition-0;
+		}
+	}
+
+	input[type=submit] {
+		color: $color-main-text;
+		text-decoration: underline;
+		border: 0;
+		background-color: inherit;
+
+		&:hover {
+			color: $color-link;	
+		}
+	}
+}

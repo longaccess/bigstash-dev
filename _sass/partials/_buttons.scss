@@ -1,0 +1,207 @@
+// ------------------------------
+
+// General Button Styles
+
+// ------------------------------
+
+.btn {
+	~:not(.btn-outline,.btn-e) {
+		border: 0;
+	}
+
+	border-radius: 3px;
+	text-decoration: none;
+	font-weight: 600;
+	@extend %transition-2;
+
+	&:active,
+	&:focus {
+		box-shadow: none;
+		outline: none;
+	}
+
+	&:active {
+		transition: none;
+	}
+
+	span[class^='icon'] {
+		font-size: 110%;
+	}
+}
+
+.btn-round {
+	border-radius: 20px;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+}
+
+.btn-group.open .dropdown-toggle {
+	box-shadow: none;
+}
+
+// ------------------------------
+
+// Filled Buttons
+
+// ------------------------------
+
+.btn-green, .btn-red, .btn-blue, .btn-blue2, .btn-orange {
+	color: $color-white !important;
+}
+
+.btn-white {
+	background-color: $color-white;
+	border-color: $color-border;
+	&:hover {
+		background: $color-grey-lightest;
+		border-color: $color-border-dark;
+	}
+	&:active {
+		background: $color-grey-light;
+		border-color: $color-border-dark;
+	}
+}
+
+.btn-green {
+	background-color: $color-green;
+	&:hover {background-color: $color-green-light;}
+	&:active {background-color: $color-green-dark;}
+}
+
+.btn-red {
+	background-color: $color-red;
+	&:hover {background-color: $color-red-lightest;}
+	&:active {background-color: $color-red-dark;}
+}
+
+.btn-blue {
+	background-color: $color-blue;
+	&:hover {background-color: $color-blue-light;}
+	&:active {background-color: $color-blue-dark;}
+}
+
+.btn-blue2 {
+	background-color: $color-blue2;
+	&:hover {background-color: $color-blue2-lightest;}
+	&:active {background-color: $color-blue2-dark;}
+}
+
+.btn-orange {
+	background-color: $color-orange;
+	&:hover {background-color: $color-orange-lightest;}
+	&:active {background-color: $color-orange-dark;}
+}
+
+// ------------------------------
+
+// Outlined Buttons
+
+// ------------------------------
+
+.btn-outline-white {
+	background: $color-white;
+	border-color: $color-border;
+	&:hover {
+		background: $color-grey-lightest;
+		border-color: $color-border-dark;
+	}
+	&:active {
+		color: inherit !important;
+		background: $color-grey-light;
+		border-color: $color-border-dark;
+		box-shadow: inset 0 1px 0 $color-grey;
+	}
+}
+
+.btn-outline-green {
+	color: $color-green-darkest;
+	background: $color-white;
+	border-color: $color-green;
+	&:hover {
+		color: $color-white;
+		background: $color-green;
+		border-color: $color-green-dark;
+	}
+	&:active {
+		color: $color-white !important;
+		background: $color-green-dark;
+		border-color: $color-green-darkest;
+		box-shadow: inset 0 1px 0 $color-green-darkest;
+	}
+}
+
+.btn-outline-red {
+	color: $color-red-darkest;
+	background: $color-white;
+	border-color: $color-red;
+	&:hover {
+		color: $color-white;
+		background: $color-red;
+		border-color: $color-red-dark;
+	}
+	&:active {
+		color: $color-white !important;
+		background: $color-red-dark;
+		border-color: $color-red-darkest;
+		box-shadow: inset 0 1px 0 $color-red-darkest;
+	}
+}
+
+.btn-outline-blue {
+	color: $color-blue-darkest;
+	background: $color-white;
+	border-color: $color-blue;
+	&:hover {
+		color: $color-white;
+		background: $color-blue;
+		border-color: $color-blue-dark;
+	}
+	&:active {
+		color: $color-white !important;
+		background: $color-blue-dark;
+		border-color: $color-blue-darkest;
+		box-shadow: inset 0 1px 0 $color-blue-darkest;
+	}
+}
+
+.btn-outline-blue2 {
+	color: $color-blue2-darkest;
+	background: $color-white;
+	border-color: $color-blue2;
+	&:hover {
+		color: $color-white;
+		background: $color-blue2;
+		border-color: $color-blue2-dark;
+	}
+	&:active {
+		color: $color-white !important;
+		background: $color-blue2-dark;
+		border-color: $color-blue2-darkest;
+		box-shadow: inset 0 1px 0 $color-blue2-darkest;
+	}
+}
+
+.btn-outline-orange {
+	color: $color-orange-darkest;
+	background: $color-white;
+	border-color: $color-orange;
+	&:hover {
+		color: $color-white;
+		background: $color-orange;
+		border-color: $color-orange-dark;
+	}
+	&:active {
+		color: $color-white !important;
+		background: $color-orange-dark;
+		border-color: $color-orange-darkest;
+		box-shadow: inset 0 1px 0 $color-orange-darkest;
+	}
+}
+
+.btn.disabled, .btn[disabled] {
+	opacity: 0.55;
+}
+
+.btn-section-end {
+	margin-bottom: 1.75em;
+}

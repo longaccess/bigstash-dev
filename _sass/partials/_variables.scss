@@ -1,0 +1,68 @@
+// Fonts
+$font-name-a:	"proxima-nova", Proxima Nova;
+$font-sans:		$font-name-a, Helvetica Neue, Helvetica, Arial,	sans-serif;
+
+// Colors
+$color-white:				#FFFFFF;
+
+$color-grey-lightest:		darken($color-white, 4%);
+$color-grey-light:			darken($color-white, 8%);
+$color-grey:				darken($color-white, 12%);
+$color-grey-dark:			darken($color-white, 16%);
+$color-grey-darkest:		darken($color-white, 18%);
+
+$color-cocoa-brown:			#2D231E;
+$color-wild-sand:			#F5F5F5;
+$color-gallery:				#ECECEC;
+$color-silver:				#C6C6C6;
+$color-silver-chalice:		#ADADAD;
+$color-mercury:				darken($color-white, 15%);
+$color-alto:				#DDDDDD;
+$color-white-subtle:		rgba(255,255,255,0.7);
+
+$color-green:				#19AA5C;
+$color-green-dark:			darken($color-green, 4%);
+$color-green-darkest:		darken($color-green, 8%);
+$color-green-light:			lighten($color-green, 4%);
+$color-green-lightest:		lighten($color-green, 8%);
+$color-green-very-light:	#c2ead4;
+
+$color-red:					#F05023;
+$color-red-dark:			darken($color-red, 4%);
+$color-red-darkest:			darken($color-red, 8%);
+$color-red-light:			lighten($color-red, 4%);
+$color-red-lightest:		lighten($color-red, 8%);
+$color-red-very-light:		#f3d8d1;
+
+$color-blue:				#0087CB;
+$color-blue-dark:			darken($color-blue, 4%);
+$color-blue-darkest:		darken($color-blue, 8%);
+$color-blue-light:			lighten($color-blue, 4%);
+$color-blue-lightest:		lighten($color-blue, 8%);
+$color-blue-very-light:		#ceebf9;
+
+$color-blue2:				#00AAFF;
+$color-blue2-dark:			darken($color-blue2, 4%);
+$color-blue2-darkest:		darken($color-blue2, 8%);
+$color-blue2-light:			lighten($color-blue2, 4%);
+$color-blue2-lightest:		lighten($color-blue2, 8%);
+
+$color-anakiwa:				#abe4ff;
+
+$color-orange:				#FD972B;
+$color-orange-dark:			darken($color-orange, 4%);
+$color-orange-darkest:		darken($color-orange, 8%);
+$color-orange-light:		lighten($color-orange, 4%);
+$color-orange-lightest:		lighten($color-orange, 8%);
+$color-orange-very-light:	#fff1e2;
+
+$color-main-text:			$color-cocoa-brown;
+$color-link:				$color-blue-darkest;
+$color-background:			$color-grey-lightest;
+$color-hover:				$color-grey-light;
+
+$color-border:				#d3d3d3;
+$color-border-dark:			$color-silver;
+$color-border-shadow:		$color-alto;
+
+$color-highlight:			#ff0;
